@@ -18,45 +18,6 @@ function Detail() {
   useEffect(() => {
     getMovie();
   }, []);
-  return (
-    <div>
-      {loading ? (
-        <h1 className={styles.loader}>Loading...</h1>
-      ) : (
-        <div className={styles.section}>
-          <img src={movie.large_cover_image} alt={movie.title} />
-          <h2 style={{ fontFamily: "fantasy" }}>{movie.title}</h2>
-          <p>
-            <Badge pill bg="danger">
-              Rating
-            </Badge>
-            {` ${movie.rating}`}
-          </p>
-          <p>
-            <Badge pill bg="info">
-              Download count
-            </Badge>
-            {` ${movie.download_count}`}
-          </p>
-          <p>
-            <Badge pill bg="primary">
-              Like count
-            </Badge>
-            {` ${movie.like_count}`}
-          </p>
-          <p>
-            <Badge pill bg="warning">
-              Runtime
-            </Badge>
-            {` ${movie.runtime}`}
-          </p>
-          <p>{movie.description_full}</p>
-          <ul>
-            {movie.genres && movie.genres.map((g) => <li key={g}>{g}</li>)}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
+  return <div>hi</div>;
 }
 export default Detail;
